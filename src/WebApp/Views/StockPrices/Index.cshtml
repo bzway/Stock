@@ -1,0 +1,249 @@
+﻿@model IEnumerable<Shared.Entity.StockPrice>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Open)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Last)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Current)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Max)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Min)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sell)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Turnover)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buy1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuyPrice1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buy2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuyPrice2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buy3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuyPrice3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buy4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuyPrice4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buy5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuyPrice5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sell1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellPrice1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sell2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellPrice2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sell3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellPrice3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sell4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellPrice4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sell5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellPrice5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MillSecond)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Open)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Last)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Current)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Max)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Min)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Buy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sell)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Turnover)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Buy1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuyPrice1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Buy2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuyPrice2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Buy3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuyPrice3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Buy4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuyPrice4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Buy5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuyPrice5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sell1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellPrice1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sell2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellPrice2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sell3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellPrice3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sell4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellPrice4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sell5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellPrice5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MillSecond)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
