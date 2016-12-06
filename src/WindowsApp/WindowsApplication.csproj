@@ -92,7 +92,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationDbContext - Copy.cs" />
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

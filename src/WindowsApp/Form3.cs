@@ -49,10 +49,10 @@ namespace WindowsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (ApplicationDbContext db = new ApplicationDbContext())
-            {
-                db.Database.CreateIfNotExists();
-            }
+            //using (ApplicationDbContext db = new ApplicationDbContext())
+            //{
+            //    db.Database.CreateIfNotExists();
+            //}
             foreach (var path in Directory.GetFiles(@"D:\Work\Stock\samples\stock", "*.txt", SearchOption.TopDirectoryOnly))
             {
 
