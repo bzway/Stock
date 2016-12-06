@@ -124,7 +124,7 @@
   <ItemGroup>
     <Compile Include="MongoDataBase.cs" />
     <Compile Include="IDataBase.cs" />
-    <Compile Include="EFDbContext.cs" />
+    <Compile Include="SqlDatabase.cs" />
     <Compile Include="Entity\IEntity.cs" />
     <Compile Include="Entity\StockPrice.cs" />
     <Compile Include="Entity\DailyPrice.cs" />

@@ -8,7 +8,7 @@ using MongoDB.Driver;
 using System;
 using System.Linq;
 
-namespace WindowsApp.DataBase
+namespace Shared.DataBase
 {
 
     public class MongoDataBase : IDataBase
@@ -25,7 +25,7 @@ namespace WindowsApp.DataBase
             return new MongoRepository<BaseEntity>(this.db, Name);
         }
 
-        public IRepository<T> DataSet<T>() where T : BaseEntity, new()
+        public IRepository<T> DataSet<T>() where T : BaseEntity
         {
             return new MongoRepository<T>(this.db, typeof(T).Name);
         }
@@ -35,7 +35,7 @@ namespace WindowsApp.DataBase
 
         }
 
-        public class MongoRepository<T> : IRepository<T> where T : BaseEntity, new()
+        public class MongoRepository<T> : IRepository<T> where T : BaseEntity
         {
             private readonly IMongoDatabase db;
 

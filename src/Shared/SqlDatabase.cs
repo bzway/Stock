@@ -7,22 +7,22 @@ using Shared.Entity;
 using System;
 using System.Linq;
 
-namespace WindowsApp.DataBase
+namespace Shared.DataBase
 {
 
-    public class EFDbContext : IDataBase
+    public class SqlDatabase : IDataBase
     {
         readonly DbContext db;
-        public EFDbContext(DbContext db)
+        public SqlDatabase(DbContext db)
         {
             this.db = db;
         }
         public IRepository<BaseEntity> Data(string Name)
         {
-            return new SQLRepository<BaseEntity>(this.db.Set<BaseEntity>());
+            return new SQLRepository<BaseEntity>(this.db.Set(Name.GetType()));
         }
 
-        public IRepository<T> DataSet<T>() where T : BaseEntity, new()
+        public IRepository<T> DataSet<T>() where T : BaseEntity
         {
             return new SQLRepository<T>(this.db.Set<T>());
         }
@@ -32,10 +32,10 @@ namespace WindowsApp.DataBase
             this.db.Dispose();
         }
 
-        public class SQLRepository<T> : IRepository<T> where T : BaseEntity, new()
+        public class SQLRepository<T> : IRepository<T> where T : BaseEntity
         {
-            readonly DbSet<T> ds;
-            public SQLRepository(DbSet<T> ds)
+            readonly DbSet ds;
+            public SQLRepository(DbSet ds)
             {
                 this.ds = ds;
             }
@@ -46,9 +46,8 @@ namespace WindowsApp.DataBase
 
             public IQueryable<T> Query()
             {
-                return this.ds.AsNoTracking().AsQueryable<T>();
+                return this.ds.OfType<T>().AsNoTracking().AsQueryable<T>();
             }
-
             public void Update(T obj)
             {
                 this.ds.Attach(obj);

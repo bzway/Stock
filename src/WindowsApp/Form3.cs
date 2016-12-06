@@ -8,7 +8,6 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsApp.DataBase;
 using WindowsApp.Models;
 
 namespace WindowsApp
@@ -75,12 +74,15 @@ namespace WindowsApp
                     }
                     if (list.Count > 0)
                     {
-                        db.DailyPrices.InsertMany(list);
+                        foreach (var item in list)
+                        {
+                            db.DataSet<DailyPrice>().Insert(item);
+                        }
                     }
                 }
                 File.Move(fi.FullName, @"D:\Work\Stock\samples\OK\" + fi.Name);
 
             }
-        } 
+        }
     }
 }

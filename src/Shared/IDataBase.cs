@@ -7,14 +7,14 @@ using Shared.Entity;
 using System;
 using System.Linq;
 
-namespace WindowsApp.DataBase
+namespace Shared.DataBase
 {
     public interface IDataBase : IDisposable
     {
-        IRepository<T> DataSet<T>() where T : BaseEntity, new();
+        IRepository<T> DataSet<T>() where T : BaseEntity;
         IRepository<BaseEntity> Data(string Name);
     }
-    public interface IRepository<T> where T : BaseEntity, new()
+    public interface IRepository<T> where T : BaseEntity
     {
         void Update(T obj);
         void Insert(T obj);
